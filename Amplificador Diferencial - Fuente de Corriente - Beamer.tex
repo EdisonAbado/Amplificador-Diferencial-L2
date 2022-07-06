@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% Colaboración:Edison Abado Ancco
+% 145012 - UNSAAC - INgeniería electrónica
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+%
+%\documentclass{beamer}
+\documentclass[aspectratio=169, 8pt]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}%****
+%\usetheme{Copenhagen}
+% \usetheme{Darmstadt} %***
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}%****
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}%**
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}%***
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}%***
+%\usecolortheme{dolphin}%****
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}%****
+%\usecolortheme{orchid}%****
+%\usecolortheme{rose}%***
+%\usecolortheme{seagull}%todo gris
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}%azul
+%\usecolortheme{wolverine}%amarillo azul
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[utf8]{inputenc} %el tipo de codificación que incluye símbolos como la tilde
+%\usepackage[spanish]{babel}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{enumitem}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Señales y Sistemas]{Solucion de Pregunta 2} % The short title appears at the bottom of every slide, the full title is only on the title page
+\author{Edison Abado A., Alumno 2, Alumno 3.} % Your name 145013, thupaq isaac ayquipa daza 114152
+\institute[UNSAAC] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+	\begin{figure}[hbtp]
+		\centering
+		\includegraphics[width=12cm]{IMAGENES/escudo b}
+	\end{figure}
+
+}
+\date{\today} % Date, can be changed to a custom date
+
+
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%\begin{frame}
+%	\begin{abstract}
+%		Solución analítica de un problema propuesto de componentes lineales y un diodo.
+%	\end{abstract}
+%\end{frame}
+
+
+%\begin{frame}
+%	\tableofcontents
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	METODO DE GAUSS - SEIDEL
+%----------------------------------------------------------------------------------------
+\section{Pregunta}
+\frametitle{explanation}
+\begin{frame}
+\subsection{Enunciado}
+
+\begin{exampleblock}{Enunciado}
+	Considerando la siguiente señal \cite{Oppenheim}:
+	\begin{equation}
+		x(t) = 1 + sen(\omega_o t) + 0.5cos (\omega_o t) + cos\left(2 \omega_o t + \frac{\pi}{4}\right)
+		\label{ec1}
+	\end{equation}
+	
+	Determine los coeficientes de Fourier, comparando con la siguiente expresión:
+	
+	\begin{equation}
+		x(t)=\sum_{k=-\infty}^{+ \infty} a_k e^{-j\omega_ot}
+	\end{equation}
+	
+	Además, graficar el Modulo y la Fase de los coeficientes encontrados.
+\end{exampleblock}
+\end{frame}
+
+
+
+\begin{frame}{Bibliografía}
+	\bibliographystyle{ieeetr}
+	\bibliography{bibliografia}
+\end{frame}
+
+\end{document} 
