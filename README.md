@@ -4,4 +4,5 @@ In this repository you will find information about the design of current sources
 <h1 align="center">
 	<img src="IMAGENES/differential_amplifier.png" alt="general_image_for_this_repository">
 </h1>
-<a href="https://www.google.com/](https://www.overleaf.com/download/project/62c6e744296e0d39db8af34f/build/181db104abb-7a1406581c71c948/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-e2-f-lz1j&popupDownload=true" target="_blank">pdf file</a>
+To view the complete file, just click 
+<a href="https://www.google.com/](https://www.overleaf.com/download/project/62c6e744296e0d39db8af34f/build/181db104abb-7a1406581c71c948/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-e2-f-lz1j&popupDownload=true" target="_blank">here</a>.
