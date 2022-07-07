@@ -4,5 +4,3 @@ In this repository you will find information about the design of current sources
 <h1 align="center">
 	<img src="" alt="general_image_for_this_repository">
 </h1>
-
-A completar se dijo...
