@@ -2,5 +2,5 @@
 
 In this repository you will find information about the design of current sources for differetial amplifieres. 
 <h1 align="center">
-	<img src="" alt="general_image_for_this_repository">
+	<img src="IMAGENES/differential_amplifier.png" alt="general_image_for_this_repository">
 </h1>
