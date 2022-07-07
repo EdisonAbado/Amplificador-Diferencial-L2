@@ -3,3 +3,4 @@ In this repository you will find information about the uses of differential ampl
 <h1 align="center">
   <img src="https://electronicscoach.com/wp-content/uploads/2018/05/differential-amplifier-using-op-amp.jpg" alt="Neovim">
 </h1>
+A completar se dijo...
