@@ -2,6 +2,7 @@
 
 In this repository you will find information about the disign of currents sources for differetial amplifieres. 
 <h1 align="center">
-	<img src="https://electronicscoach.com/wp-content/uploads/2018/05/differential-amplifier-using-op-amp.jpg" alt="Neovim">
+	<img src="" alt="general_image_for_this_repository">
 </h1>
+
 A completar se dijo...
