@@ -8,5 +8,6 @@ The topics to be studied are:
 	* TTL technology.
 	* CMOS technology.
 	* Carbone Nanotube.
+	
 To view the complete file, just click 
 <a href="https://www.overleaf.com/download/project/62c6e744296e0d39db8af34f/build/181db1a28ca-f223aa86af595b6b/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-e2-f-lz1j&popupDownload=true" target="_blank">here</a>.
