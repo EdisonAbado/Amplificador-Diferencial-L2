@@ -8,8 +8,6 @@
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-% Colaboración:Edison Abado Ancco
-% 145012 - UNSAAC - INgeniería electrónica
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,64 +18,11 @@
 %\documentclass{beamer}
 \documentclass[aspectratio=169, 8pt]{beamer}
 
-\mode<presentation> {
-	
-	% The Beamer class comes with a number of default slide themes
-	% which change the colors and layouts of slides. Below this is a list
-	% of all the themes, uncomment each in turn to see what they look like.
-	
-	%\usetheme{default}
-	%\usetheme{AnnArbor}
-	%\usetheme{Antibes}
-	%\usetheme{Bergen}
-	%\usetheme{Berkeley}
-	%\usetheme{Berlin}
-	%\usetheme{Boadilla}
-	\usetheme{CambridgeUS}%****
-	%\usetheme{Copenhagen}
-	% \usetheme{Darmstadt} %***
-	%\usetheme{Dresden}
-	%\usetheme{Frankfurt}
-	%\usetheme{Goettingen}%****
-	%\usetheme{Hannover}
-	%\usetheme{Ilmenau}
-	%\usetheme{JuanLesPins}
-	%\usetheme{Luebeck}
-	%\usetheme{Madrid}
-	%\usetheme{Malmoe}
-	%\usetheme{Marburg}
-	%\usetheme{Montpellier}%**
-	%\usetheme{PaloAlto}
-	%\usetheme{Pittsburgh}
-	%\usetheme{Rochester}
-	%\usetheme{Singapore}%***
-	%\usetheme{Szeged}
-	%\usetheme{Warsaw}
-	
-	% As well as themes, the Beamer class has a number of color themes
-	% for any slide theme. Uncomment each of these in turn to see how it
-	% changes the colors of your current slide theme.
-	
-	%\usecolortheme{albatross}
-	%\usecolortheme{beaver}
-	%\usecolortheme{beetle}
-	%\usecolortheme{crane}%***
-	%\usecolortheme{dolphin}%****
-	%\usecolortheme{dove}
-	%\usecolortheme{fly}
-	%\usecolortheme{lily}%****
-	%\usecolortheme{orchid}%****
-	%\usecolortheme{rose}%***
-	%\usecolortheme{seagull}%todo gris
-	%\usecolortheme{seahorse}
-	%\usecolortheme{whale}%azul
-	%\usecolortheme{wolverine}%amarillo azul
-	
-	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
-	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
-	
-	%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
-}
+\usetheme[secheader]{Madrid}
+\usecolortheme[RGB={23, 110, 181}]{structure}
+\setbeamertemplate{blocks}[default]
+
+
 
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
@@ -85,97 +30,339 @@
 %\usepackage[spanish]{babel}
 \usepackage[spanish,es-nodecimaldot]{babel}
 \usepackage{enumitem}
+\setbeamertemplate{caption}[numbered]
 
+\usepackage{float}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
+
+
 \title[Circuitos electrónicos II]{Tendencias en el diseño de fuentes de corrientes para amplificadores diferenciales } % The short title appears at the bottom of every slide, the full title is only on the title page
-\author{Edison Abado A., Wilmer Condori O., Kevin Cuba A., Roly Sandro G. B., Joseph Garfias Q.} % Your name 145013, thupaq isaac ayquipa daza 114152
-\institute[UNSAAC] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
-{
-	\begin{figure}[hbtp]
-		\centering
-		\includegraphics[width=12cm]{IMAGENES/escudo b}
-	\end{figure}
-	
-}
-\date{\today} % Date, can be changed to a custom date
+\subtitle{Recopilación Bibliográfica}
+\author{Edison Abado A., Wilmer Condori O., Kevin Cuba A., Roly Sandro G. B., Joseph Garfias Q.} % Your name
+\institute[]{\Large{Universidad Nacional de San Antonio Abado del Cusco} \vspace{3mm}\\
+	\includegraphics[width=1.5cm]{IMAGENES/logoLiC.pdf} \vspace{2mm}\\
+	\Large{Facultad de Ingeniería Eléctria, Electrónica, Informática y Mecánica} \\
+	\large{Escuela Profesional de Ingeniería Electrónica} }
+\date{\today}
 
 
 
 \begin{document}
 	
+\begin{frame}
+	\titlepage % Print the title page as the first slide
+\end{frame}
+
+%%%%%%%%%%%%%%%%55\
+ %   EDISON
+%%%%%%%%%%%%%%%%%%%%%%%5
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+
+\begin{frame}{Tecnología CNFET CNTFET}
+	\section{FET de Nanotubos de Carbono}
 	
-	\begin{frame}
-		\titlepage % Print the title page as the first slide
-	\end{frame}
+	Las necesidades de eficiencia nos llevan a buscar nuevas maneras de realizar tareas con el fin de aumentar la eficiencia, partiendo de ello se tiene a un dispositivo electrónico cuya composición se gestó en 1991 por Sumio Ijima (un nanotubo multicapoa) y en 1993 con Donal Bethude que produjo nanotubos de Carbono de una sola capa.
 	
-	\section{Tecnologías de los CMOS y TTL}
-	\frametitle{Tecnologías}
-	\begin{frame}
-		Los diseños de los circuitos integrados están basados en el tipo de tecnología (TTL, CMOS, ECL, etc) que presenta que nos permita solucionar los problemas de los amplificadores operacionales y sus derivados, desde su propia arquitectura, ruido que presenta cada circuito al momento de diseñar e implementar en la realidad, es por eso, que se analizará el uso de los transistores BJT y CMOS.
-		\begin{block}{Transistores BJT}
-			Dispositivo electrónico que tiene como función la de permitir el paso de corriente en un único sentido de manera controlada.
-			\begin{figure}[!h]
-				\centering
-				\includegraphics[width=7.5cm,height=4cm]{IMAGENES/1.PNG}
-				\caption{Transistor BJT (a) NPN y (b) su símbolo y (c) PNP y (d) su símbolo. \cite{1}}
-				\label{f_1}
-			\end{figure}
-		\end{block}
-	\end{frame}
+	Desde entonces, se fueron desarrollando nanotubos de carbono para dierentes aplicaciones, entre ellas, la que más nos interesa, los nanotubos de carbono para aplicaciones de semiconductores, para ser más específicos, el CNFET o CNTFET (Carbon Nanotube FET) cudo diámetro de circunferencia va desde $<1nm$ hasta $50nm$ \cite{DesignandSimulationofCarbon2021} para aplicaciones de nuestro interes.
 	
-	\begin{frame}
-		\begin{block}{Transistores CMOS}
-			La tecnología CMOS hace uso de básicamente de transistores de efecto de campo NMOS y PMOS, este tipo de ciencia es más rapida y consumo menos potencia de energía que requiere otras familias. Debido a que presenta mayor densidad de integración.  
-			\begin{figure}[!h]
-				\centering
-				\includegraphics[width=7.5cm,height=4cm]{IMAGENES/2.PNG}
-				\caption{Símbolos más comunes de los transistores PMOS y NMOS \cite{2}}
-				\label{f_2}
-			\end{figure}
-		\end{block}
-	\end{frame}
 	
-	\begin{frame}
-		Las diferencias que presentan las familias de los CMOS y los TTLs son:
-		\begin{itemize}
-			\item Los CMOS presenta un mayor intervalo de voltaje y un factor de carga más elevado que los TTL.
-			\item Los CMOS tienen una mayor inmunidad al ruido que los TTL.
-			\item Los CMOS son más lentos en cuanto a velocidad de operación que los TTL.
-			\item Los circuitos integrados CMOS es de menor consumo de potencia que los TTL.
-			\item La inmunidad al ruido de CMOS es mucho mejor que los circuitos TTL.
-		\end{itemize}
-	\end{frame}
 	
-	\section{Nuevas tecnologías}
-	\begin{frame}
-		A lo largo de los años se empezaron a realizar estudios en los nanotubos de carbono (CNT) que presenta diferentes configuraciones, en especial en las nanométricas que están empezando a tener lugar importante en los amplificadores diferenciales, amplificadores operacionales entre otros derivados que son empleados en las tecnologías conocidas, así como en las telecomunicaciones.\\
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=6cm]{IMAGENES/img11}
+		\caption{Diseño de un CNFET como un MOSFET \cite{DesignofanovelternarySRAM2017}}
+		\label{img11}
+	\end{figure}
+
+	
+\end{frame}
+
+\begin{frame}{Tecnología CNFET CNTFET}
+	\subsection{Clasificación de nanotubos de carbono}
+	
+	La principal clasificación se da por el tipo de distribución de las celdas hexagonales.
+	
+	\begin{enumerate}
+		\item Nanotubo de una sola capa (SWNT).\\
+		\item Nanotubo Multicapa (MWNT). \\
+		\item Nanotubo Mixto.
 		
-		Las CNT se comportan como sistemas unidimensionales (1D) ya que sus dimensiones se encuentran en escalas nanométricas, que definen sus propiedades físicas especiales que presenta, cuyo parámetros eléctricos y ópticos son muy superiores a los semiconductores Si, Ge y GaAs.\\
-		
-		En la búsqueda de dispositivos cada vez más pequeños con bajo consumo de energía y alta velocidad, en ese sentido se vio como opción los derivados de los nanotubos de carbono, SWCNT (Nanotubos de carbono de pared simple) que presentan un comportamiento metálico o semiconductor que nos permite proyectae buenos hilos conductores y uniones P-N a escala nanométrica.
-	\end{frame} 
-	
-	\subsection{Nanotransistores basados en CNT}
-	\begin{frame}
-		Los transistores FET estan compuestos de dos electrodos metálicos (fuente y drenaje) conectados por un semiconductor. Al variar la anchura del canal, la tensión de polarización en el electrodo llamado "puerta" controla el flujo de corriente entre la fuente y drenaje.\\
-		
-		En \cite{3} menciona que se demostró que los CNT se podian utilizarse en los diseños de FET. Donde los nanotubos de carbono se encuentra la parte superior, interconectando asi los dos electrodos de metales nobles.
-		\begin{figure}[!ht] 
+		\begin{figure}[h!]
 			\centering
-			\includegraphics[width=0.25\textwidth]{IMAGENES/3.PNG}
-			\caption{Imagen de transistor de efecto de campo con CNT obtenida por microscopio de fuerza atómica  \cite{3}}
-			\label{f_3}
+			\includegraphics[width=6cm]{IMAGENES/img12}
+			\caption{Los principios de construcción del CNT de planchas de grafeno \cite{PerformanceAnalysisofClassical2018} .}
+			\label{img12}
 		\end{figure}
 		
-		
-	\end{frame}
+	\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{Tecnología CNFET CNTFET}
+	La estructura interna de CNFET es muy parecida al del MOSFET, requiere de tres pines, y también la compuerta (Gate) controla el flujo de corriente a través del canal. el switching de la compuerta habilita  la corriente del canal \cite{PerformanceAnalysisofClassical2018}. La construcción se muestra en la figura \ref{img13}
 	
-	\begin{frame}{Bibliografía}
-		\bibliographystyle{ieeetr}
-		\bibliography{bibliografia}
-	\end{frame}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=12cm]{IMAGENES/img13}
+		\caption{Estructura del CNFET \cite{Performanceinvestigationofemerging2016}.}
+		\label{img13}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Tecnología CNFET CNTFET}
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=15cm]{IMAGENES/img14}
+		\caption{Comparación de otros dispositivos con CNFET de 7nm y 5nm \cite{UnderstandingEnergyEfficiency2018} .}
+		\label{img14}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{table}
+	\centering
+	\begin{tabular}{|p{0.4\textwidth}|p{0.4\textwidth}|}
+		\hline
+		\begin{enumerate}
+			\item[]\textbf{Nanotransistores}
+			\item FET basados en nanotubos de carbono pueden operar más rápido y con un
+			voltaje de suministro menor que sus equivalentes basados en silicio.
+			\item Con una tensión de alimentación de 0,4 voltios, la corriente que fluye a través del transistor de nanotubos de carbono es mayor que la que obtendrían los mejores transistores CMOS de silicio a una tensión de alimentación de 0.7 V.
+			\vspace{3mm}
+			\item[] \hspace{10mm}\includegraphics[scale=0.3]{IMAGENES/image1.jpg}
+		\end{enumerate} &
+		\begin{enumerate}
+			\item[]\textbf{CMOS}
+			\item FET basados en silicio tienen mayor retardo, así como el voltaje de
+			suministro lo es.
+			\item Los dispositivos de silicio, si se redujeran al tamaño del dispositivo
+			basado en nanotubos de carbono, aún seguirían siendo más lentos. 
+			\vspace{3mm}
+			\item[] \hspace*{10mm}\includegraphics[scale=0.3]{IMAGENES/2.png}
+		\end{enumerate}\\
+		\hline
+	\end{tabular}
+	\caption{Nanotubos de carbono en comparación con los CMOS}
+\end{table}
+\end{frame}
+
+%----------------- Diseño de fuentes de corrientes ---------------------
+\section{Criterios de diseño de fuentes de corriente}
+\begin{frame}{Criterios de diseño de fuentes de corriente}
+La parte primordial de los amplificadores operacionales son los DA (differential amplifier), ya que este amplifica la diferencia de dos entredas de voltaje. Estos estan elaborados con tecnologias CMOS y los BIPOLARES, que con el tiempo se vio las deficiencias que presenta.
+\begin{itemize}
+	\item Elevado consumo de energia
+	\item Velocidad de tecnologia en los bipolares
+	\item Los MOSFET en escalas de nano presenta limitaciones
+\end{itemize}
+En ese sentido se hace uso de los CNTFET (transistor de efecto de campo de nanotubos de carbono) que son los nuevas herramientas del futuro para los dispositivos electrónicos.\\
+Como menciona \cite{Akhoon}, CNTFET es un dispositivo prometedor y se puede utilizar para extender la validez de la ley más conocida de Gordan Moore. Se ha encontrado que el CNTFET intrínseco tiene Características $CV/I \sim 13$ veces más altas que las de un convencional $n-MOSFET$, el transistor de efecto de campo de nanotubos de carbono (CNFET) es una excelente alternativa a un transistor a granel tradicional para bajo consumo de energía y alto rendimiento, según \cite{Liu}
+\end{frame}
+\begin{frame}{Propiedades}
+\begin{itemize}
+	\item Reducción de potencia consumida 
+	\item Alta velocidad de procesamiento
+	\item Eficiencia en los circuitos integrados 
+	\item Gran capacidad de conducción eléctrica 
+	\item Alta resistencia a la tracción
+	\item Conductividad térmica
+\end{itemize}
+\begin{block}{Nanotubos}
+	Son laminas de grafeno enrollados en tubos, que presentan caracteristicas: 
+	\begin{itemize}
+		\item Eléctricas
+		\item Mecánicas
+		\item Semiconductoras
+		\item Prop. optoelectrónicas
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[!h] 
+	\centering
+	\includegraphics[scale=0.7]{IMAGENES/1.PNG}
+	\caption{Estructura interna de los nanotubos de carbono \cite{Prasad}}
+	\label{f_4}
+\end{figure}
+De acuerdo a la figura \ref{f_4}, podemos observar que presenta 2 formas:
+\begin{itemize}
+	\item Single wall carbone nanotube (SWCNT)
+	\item Multi wall carbone nanotube (MWCNT)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Parámetros de diseño}
+\begin{block}{Diametro de los nanotubos}
+	\begin{equation}
+		D_{CNT} =  \frac{\sqrt{3}a_0}{\pi}\sqrt{n^2 + m^2 + mn}
+	\end{equation}
+	Donde:\\
+	\begin{itemize}
+		\item n,m son los valores de vectores de quiralidad del nanotubo
+		\item $a_0$ distancia interatómica entre cada átomo de carbono
+	\end{itemize}
+\end{block}
+\begin{block}{Voltaje umbral}
+	\begin{equation}
+		V_{th}\approx \frac{E_g}{2e} = \frac{\sqrt{3}}{3}\frac{a V_{\pi}}{eD_{CNT}}
+	\end{equation}
+	\begin{itemize}
+		\item $a= 2.49A$, distancia de carbono a átomo de carbono
+		\item $V_{\pi} = 3.033eV$ energía de enlace del carbono
+		\item $e$, es el valor de la carga del electrón
+	\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Ancho de banda}
+	\begin{equation}
+		W = (N-1)S+D_{CNT}
+	\end{equation}
+	\begin{itemize}
+		\item N, números de CNTS
+		\item S, es la distancia entre el centro de dos CNTs (factor importante para el diseño)
+	\end{itemize}
+	\textbf{\textit{La influencia de varios parámetros de $CNTFET$, N, S y $D_{CNT}$}}
+\end{block}
+\begin{figure}[!h] 
+	\centering
+	\includegraphics[scale=0.5]{IMAGENES/4.PNG}
+	\caption{Variación de (a) Ganancia de corriente (b) Disipación de potencia (c) Ancho de banda (d) Frecuencia de ganancia unitaria con N en la propuesta basada en CNT-DA\cite{Akhoon}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}[!h] 
+	\centering
+	\includegraphics[scale=0.8]{IMAGENES/5.PNG}
+	\caption{Variación de (a) ganancia de corriente (b) Disipación de potencia (c) Ancho de banda (d) Frecuencia de ganancia unitaria con respecto al tono de CNT-DA \cite{Akhoon}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}[!h] 
+	\centering
+	\includegraphics[scale=0.8]{IMAGENES/6.PNG}
+	\caption{Variación de (a) Ganancia (b) Disipación de potencia (c) Ancho de banda (d) Frecuencia de ganancia unitaria con respecto al diámetro de CNT-DA \cite{Akhoon}}
+\end{figure}
+\end{frame}
+
+%-------------------- Fuentes de corrientes --------------------------
+
+
+\section{Fuentes de corrientes}
+\begin{frame}{Algunas fuentes de corrientes}
+\begin{itemize}
+	\item Fuente de corriente constante cascode
+	\item Fuente de corriente constante con FET(Mosfet)
+\end{itemize}
+\end{frame}
+
+\subsection{Fuente de corriente constante cascode}
+
+\begin{frame}{Algunas fuentes de corrientes}{subtitle}
+\framesubtitle{Fuente de corriente constante cascode}
+Una forma de eliminar la disparidad de $V_{DS}$ es usar la configuración
+cascode:
+\begin{figure}[!ht]
+	\includegraphics[scale=0.3]{IMAGENES/image3.png}
+\end{figure}
+$V_{DD}$ tal que $V_X = V_Y$
+$$\dfrac{\left(\dfrac{W}{L}\right)_3}
+{\left(\dfrac{W}{L}\right)_0} = 
+\dfrac{\left(\dfrac{W}{L}\right)_2}
+{\left(\dfrac{W}{L}\right)_1}$$ 
+
+donde
+\begin{center}
+	\hspace{-5mm}W: ancho de puerta\\
+	L: longitud de la puerta
+\end{center}
+\end{frame}
+
+\begin{frame}{Algunas fuentes de corrientes}
+\framesubtitle{Fuente de corriente constante cascode}
+\begin{align}
+	V_{P_{min}} &= V_{DS_{sat_{2}}} + V_{DS_{sat_3}} \\
+	V_{P_{min}} &= (V_{GS_0} - V_{TH_0}) + (V_{GS_1} - V_{TH_1}) \\
+	V_{P_{min}} &= 2V_{DS_{sat}} + V_{TH_3} = 2V_{OD} + V_{TH} \\
+\end{align}
+Dimensionando correctamente los transistores logramos que $M_3$
+absorba las variaciones de $V_P$ y mantenga $V_X = VY$.\newline
+
+Por debajo de la tensión mínima de salida, $M_3$ ya no puede 
+absorber las diferencias de $V_{DS}$ y $V_B$ y será distinto a 
+$V_A$, volviendo a los problemas de espejo simple. Para tensiones
+muy bajas, la resistencia de salida se degrada.
+
+\begin{figure}
+	\includegraphics[scale=0.3]{IMAGENES/image4.png}
+\end{figure}
+\end{frame}
+
+\subsection{Fuente con FET}
+\begin{frame}{Algunas fuentes de corrientes}{subtitle}
+\framesubtitle{Fuente de corriente constante con FET(Mosfet)}
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item El par diferencial básico consta de dos MOSFET de enriquecimiento acoplados ($Q_1$ y $Q_2$), polarizados con una fuente de corriente constante; esta ultima suele ser una configuración de espejo de corriente similar a la utilizada con BJT’s. desde luego se supone que el circuito de carga es tal que los dos MOSFET que conforman el par, se encuentran operando en la región de saturación.
+			\item El MOSFET es frecuentemente usado como amplificador de potencia y ofrece como ventaja una resistencia de entrada alta, prácticamente infinita en la compuerta y una corriente de polarización de entrada cai cero.
+			\item Existen dos razones fundamentales por las cuales se prefieren los amplificadores diferenciales sobre los de un solo extremo: son sensibles a la interferencia y no necesitan capacitores de paso y acoplamiento.
+		\end{itemize}
+	\end{column}
+
+	\begin{column}{0.4\textwidth}
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width=5cm]{IMAGENES/image5.png}
+			\caption{Amplificador diferencial con FETs}
+		\end{figure}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Conlusiones}
+	\section{Conclusiones}
+	
+	\begin{columns}
+		\begin{column}{0.8\textwidth}
+			\begin{block}{.}
+				\begin{itemize}
+					\item Las fuentes de corrientes   basados en nanotubos de carbono y FETs tienen ventajas por encima que los BJTs: no dependen de hie, por ende no se verán afectados por la temperatura.
+					\item Las fuentes de corrientes se usan en los amplificadores de corriente como un elemto de amplificador, ya que fijará un valor constante para el punto de operación del amplificador diferencial.
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+%------------------------- Bibliografía -------------------------------
+
+%\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\section{Bibliografía}
+\begin{frame}{Bibliografía}
+%  	\tiny
+	\small
+	\bibliographystyle{ieeetr}
+	\bibliography{bibliografia.bib}
+\end{frame}
+
+
 	
 \end{document} 
